@@ -106,15 +106,11 @@ public class MainCalculator implements ActionListener {
         double number1, number2;
         // System.out.println("flag: " + flag);
         if (flag == 1) {
+            // 利用栈进行加减乘除四则运算
             ArrayList<String> newArrayList = new ArrayList<>(5);
-            // 利用栈进行四则运算
             for (int i = 0; i <= arrayListLength; i++) {
-//                if (!arrayList.get(i).equals('+') && !arrayList.get(i).equals('-') && !arrayList.get(i).equals('x') && !arrayList.get(i).equals('÷')) {
-//                    number1 = Integer.parseInt(arrayList.get(i));
-//                }
                 if ("x÷".indexOf(arrayList.get(i)) == -1) {
                     newArrayList.add(arrayList.get(i));
-                    // newArrayList.add(arrayList.get(i));
                 } else if ("x÷".indexOf(arrayList.get(i)) != -1) {
                     number1 = Double.parseDouble(newArrayList.get(newArrayList.size() - 1));
                     number2 = Double.parseDouble(arrayList.get(i + 1));
@@ -132,9 +128,6 @@ public class MainCalculator implements ActionListener {
                     i += 1;
                 }
             }
-//            for (String s : newArrayList) {
-//                System.out.println(s);
-//            }
             for (String s : newArrayList) {
                 System.out.println(s);
             }
