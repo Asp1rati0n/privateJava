@@ -6,14 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class Main implements ActionListener {
+public class MainCalculator implements ActionListener {
     private JTextArea jTextArea;
     private String expression = "";
     private double result;
     private int errorFlag = 0;
 
     public static void main(String[] args) {
-        Main main = new Main();
+        MainCalculator main = new MainCalculator();
         main.paintFrame();
     }
 
