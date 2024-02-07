@@ -270,6 +270,7 @@ public class MainCalculator implements ActionListener {
         }
         return result;
     }
+
     public static double Multi(double m, double n) {
         return m * n;
     }
