@@ -17,103 +17,6 @@ public class MainCalculator implements ActionListener {
         main.paintFrame();
     }
 
-    public void paintFrame() {
-        JFrame jFrame = new JFrame();
-        jFrame.setBounds(500, 500, 400, 435);
-        // jFrame.setAlwaysOnTop(true);
-        jFrame.setLayout(null);
-        jFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-
-        int yStart = 150;
-        jTextArea = new JTextArea();
-        jTextArea.setBounds(0, 0, 500, yStart);
-        Font textFont = new Font(Font.DIALOG, Font.PLAIN, 26);
-        jTextArea.setFont(textFont);
-        jFrame.add(jTextArea);
-
-        JButton resetButton = new JButton("Reset");
-        resetButton.setBounds(0, yStart, 200, 50);
-        resetButton.addActionListener(this);
-        jFrame.add(resetButton);
-        JButton deleteButton = new JButton("Delete");
-        deleteButton.setBounds(200, yStart, 100, 50);
-        deleteButton.addActionListener(this);
-        jFrame.add(deleteButton);
-
-
-        JButton number7Button = new JButton("7");
-        number7Button.setBounds(0, yStart + 50, 100, 50);
-        number7Button.addActionListener(this);
-        jFrame.add(number7Button);
-        JButton number4Button = new JButton("4");
-        number4Button.setBounds(0, yStart + 100, 100, 50);
-        number4Button.addActionListener(this);
-        jFrame.add(number4Button);
-        JButton number1Button = new JButton("1");
-        number1Button.setBounds(0, yStart + 150, 100, 50);
-        number1Button.addActionListener(this);
-        jFrame.add(number1Button);
-
-        JButton number8Button = new JButton("8");
-        number8Button.setBounds(100, yStart + 50, 100, 50);
-        number8Button.addActionListener(this);
-        jFrame.add(number8Button);
-        JButton number5Button = new JButton("5");
-        number5Button.setBounds(100, yStart + 100, 100, 50);
-        number5Button.addActionListener(this);
-        jFrame.add(number5Button);
-        JButton number2Button = new JButton("2");
-        number2Button.setBounds(100, yStart + 150, 100, 50);
-        number2Button.addActionListener(this);
-        jFrame.add(number2Button);
-
-        JButton number9Button = new JButton("9");
-        number9Button.setBounds(200, yStart + 50, 100, 50);
-        number9Button.addActionListener(this);
-        jFrame.add(number9Button);
-        JButton number6Button = new JButton("6");
-        number6Button.setBounds(200, yStart + 100, 100, 50);
-        number6Button.addActionListener(this);
-        jFrame.add(number6Button);
-        JButton number3Button = new JButton("3");
-        number3Button.setBounds(200, yStart + 150, 100, 50);
-        number3Button.addActionListener(this);
-        jFrame.add(number3Button);
-
-        JButton divButton = new JButton("÷");
-        divButton.setBounds(300, yStart, 100, 50);
-        divButton.addActionListener(this);
-        jFrame.add(divButton);
-        JButton multiButton = new JButton("x");
-        multiButton.setBounds(300, yStart + 50, 100, 50);
-        multiButton.addActionListener(this);
-        jFrame.add(multiButton);
-        JButton SubButton = new JButton("-");
-        SubButton.setBounds(300, yStart + 100, 100, 50);
-        SubButton.addActionListener(this);
-        jFrame.add(SubButton);
-        JButton plusButton = new JButton("+");
-        plusButton.setBounds(300, yStart + 150, 100, 50);
-        plusButton.addActionListener(this);
-        jFrame.add(plusButton);
-
-        JButton number0Button = new JButton("0");
-        number0Button.setBounds(0, yStart + 200, 200, 50);
-        number0Button.addActionListener(this);
-        jFrame.add(number0Button);
-        JButton deciButton = new JButton(".");
-        deciButton.setBounds(200, yStart + 200, 100, 50);
-        deciButton.addActionListener(this);
-        jFrame.add(deciButton);
-        JButton equalToButton = new JButton("=");
-        equalToButton.setBounds(300, yStart + 200, 100, 50);
-        equalToButton.addActionListener(this);
-        jFrame.add(equalToButton);
-
-
-        jFrame.setVisible(true);
-    }
-
     @Override
     public void actionPerformed(ActionEvent event) {
         JButton source = (JButton) event.getSource();
@@ -276,5 +179,102 @@ public class MainCalculator implements ActionListener {
     }
     public static double Div(double m, double n) {
         return m / n;
+    }
+
+    public void paintFrame() {
+        JFrame jFrame = new JFrame();
+        jFrame.setBounds(500, 500, 400, 435);
+        // jFrame.setAlwaysOnTop(true);
+        jFrame.setLayout(null);
+        jFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+
+        int yStart = 150;
+        jTextArea = new JTextArea();
+        jTextArea.setBounds(0, 0, 500, yStart);
+        Font textFont = new Font(Font.DIALOG, Font.PLAIN, 26);
+        jTextArea.setFont(textFont);
+        jFrame.add(jTextArea);
+
+        JButton resetButton = new JButton("Reset");
+        resetButton.setBounds(0, yStart, 200, 50);
+        resetButton.addActionListener(this);
+        jFrame.add(resetButton);
+        JButton deleteButton = new JButton("Delete");
+        deleteButton.setBounds(200, yStart, 100, 50);
+        deleteButton.addActionListener(this);
+        jFrame.add(deleteButton);
+
+
+        JButton number7Button = new JButton("7");
+        number7Button.setBounds(0, yStart + 50, 100, 50);
+        number7Button.addActionListener(this);
+        jFrame.add(number7Button);
+        JButton number4Button = new JButton("4");
+        number4Button.setBounds(0, yStart + 100, 100, 50);
+        number4Button.addActionListener(this);
+        jFrame.add(number4Button);
+        JButton number1Button = new JButton("1");
+        number1Button.setBounds(0, yStart + 150, 100, 50);
+        number1Button.addActionListener(this);
+        jFrame.add(number1Button);
+
+        JButton number8Button = new JButton("8");
+        number8Button.setBounds(100, yStart + 50, 100, 50);
+        number8Button.addActionListener(this);
+        jFrame.add(number8Button);
+        JButton number5Button = new JButton("5");
+        number5Button.setBounds(100, yStart + 100, 100, 50);
+        number5Button.addActionListener(this);
+        jFrame.add(number5Button);
+        JButton number2Button = new JButton("2");
+        number2Button.setBounds(100, yStart + 150, 100, 50);
+        number2Button.addActionListener(this);
+        jFrame.add(number2Button);
+
+        JButton number9Button = new JButton("9");
+        number9Button.setBounds(200, yStart + 50, 100, 50);
+        number9Button.addActionListener(this);
+        jFrame.add(number9Button);
+        JButton number6Button = new JButton("6");
+        number6Button.setBounds(200, yStart + 100, 100, 50);
+        number6Button.addActionListener(this);
+        jFrame.add(number6Button);
+        JButton number3Button = new JButton("3");
+        number3Button.setBounds(200, yStart + 150, 100, 50);
+        number3Button.addActionListener(this);
+        jFrame.add(number3Button);
+
+        JButton divButton = new JButton("÷");
+        divButton.setBounds(300, yStart, 100, 50);
+        divButton.addActionListener(this);
+        jFrame.add(divButton);
+        JButton multiButton = new JButton("x");
+        multiButton.setBounds(300, yStart + 50, 100, 50);
+        multiButton.addActionListener(this);
+        jFrame.add(multiButton);
+        JButton SubButton = new JButton("-");
+        SubButton.setBounds(300, yStart + 100, 100, 50);
+        SubButton.addActionListener(this);
+        jFrame.add(SubButton);
+        JButton plusButton = new JButton("+");
+        plusButton.setBounds(300, yStart + 150, 100, 50);
+        plusButton.addActionListener(this);
+        jFrame.add(plusButton);
+
+        JButton number0Button = new JButton("0");
+        number0Button.setBounds(0, yStart + 200, 200, 50);
+        number0Button.addActionListener(this);
+        jFrame.add(number0Button);
+        JButton deciButton = new JButton(".");
+        deciButton.setBounds(200, yStart + 200, 100, 50);
+        deciButton.addActionListener(this);
+        jFrame.add(deciButton);
+        JButton equalToButton = new JButton("=");
+        equalToButton.setBounds(300, yStart + 200, 100, 50);
+        equalToButton.addActionListener(this);
+        jFrame.add(equalToButton);
+
+
+        jFrame.setVisible(true);
     }
 }
