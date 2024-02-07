@@ -59,7 +59,7 @@ public class Main {
         // System.out.println("flag: " + flag);
         if (flag == 1) {
             ArrayList<String> newArrayList = new ArrayList<>(5);
-            for (int i = 0; i < arrayListLength; i++) {
+            for (int i = 0; i <= arrayListLength; i++) {
 //                if (!arrayList.get(i).equals('+') && !arrayList.get(i).equals('-') && !arrayList.get(i).equals('x') && !arrayList.get(i).equals('÷')) {
 //                    number1 = Integer.parseInt(arrayList.get(i));
 //                }

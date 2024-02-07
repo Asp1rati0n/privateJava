@@ -204,7 +204,8 @@ public class Main implements ActionListener {
         // System.out.println("flag: " + flag);
         if (flag == 1) {
             ArrayList<String> newArrayList = new ArrayList<>(5);
-            for (int i = 0; i < arrayListLength; i++) {
+            // 利用栈进行四则运算
+            for (int i = 0; i <= arrayListLength; i++) {
 //                if (!arrayList.get(i).equals('+') && !arrayList.get(i).equals('-') && !arrayList.get(i).equals('x') && !arrayList.get(i).equals('÷')) {
 //                    number1 = Integer.parseInt(arrayList.get(i));
 //                }
@@ -214,7 +215,6 @@ public class Main implements ActionListener {
                 } else if ("x÷".indexOf(arrayList.get(i)) != -1) {
                     number1 = Double.parseDouble(newArrayList.get(newArrayList.size() - 1));
                     number2 = Double.parseDouble(arrayList.get(i + 1));
-                    double result;
                     if ("x".indexOf(arrayList.get(i)) != -1) {
                         result = Multi(number1, number2);
                     } else {
@@ -232,6 +232,9 @@ public class Main implements ActionListener {
 //            for (String s : newArrayList) {
 //                System.out.println(s);
 //            }
+            for (String s : newArrayList) {
+                System.out.println(s);
+            }
             result = Double.parseDouble(newArrayList.get(0));
             for (int i = 0; i < newArrayList.size(); i++) {
                 if ("+-".indexOf(newArrayList.get(i)) != -1) {
