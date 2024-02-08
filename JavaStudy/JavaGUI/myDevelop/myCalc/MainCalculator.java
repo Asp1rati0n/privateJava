@@ -21,7 +21,6 @@ public class MainCalculator implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         JButton source = (JButton) event.getSource();
         String buttonText = source.getText();
-        // JOptionPane.showMessageDialog(this, source.getText() + "clicked");
         if (buttonText.equals("Reset")) {
             expression = "";
             jTextArea.setText(expression);
@@ -33,7 +32,6 @@ public class MainCalculator implements ActionListener {
                 jTextArea.setText(expression);
             }
         } else if (buttonText.equals("=")) {
-            // jTextArea.setText("=");
             result = Calculator(expression);
             if (errorFlag == 1) {
                 errorFlag = 0;
@@ -42,12 +40,9 @@ public class MainCalculator implements ActionListener {
             } else {
                 String strResult = String.valueOf(result).replace(".0", "");
                 jTextArea.setText(expression + "=" + String.valueOf(strResult));
-                // expression = String.valueOf(result);
                 expression = "";
             }
         } else {
-//            String currentText = jTextArea.getText();
-//            jTextArea.setText(currentText + buttonText);
             expression += buttonText;
             jTextArea.setText(expression);
         }
@@ -85,7 +80,6 @@ public class MainCalculator implements ActionListener {
 
         for (int i = 0; i < arrayList.size() - 1; i++) {
             arrayListLength += 1;
-            // System.out.println(arrayList.get(i));
             if ("x÷".indexOf(arrayList.get(i)) != -1 && flag == 0) flag = 1;
             if (i + 1 >= arrayList.size() - 1) continue;
             if ("+-x÷".indexOf(arrayList.get(i)) != -1 && "+-x÷".indexOf(arrayList.get(i + 1)) != -1) {
@@ -101,10 +95,7 @@ public class MainCalculator implements ActionListener {
             }
         }
 
-        // System.out.println(arrayList.size());
-
         double number1, number2;
-        // System.out.println("flag: " + flag);
         if (flag == 1) {
             // 利用栈进行加减乘除四则运算
             ArrayList<String> newArrayList = new ArrayList<>(5);
@@ -143,15 +134,9 @@ public class MainCalculator implements ActionListener {
                     i += 1;
                 }
             }
-            // System.out.println(result);
         } else {
-            // System.out.println("Hello");
-            // System.out.println(arrayList.get(0));
             result = Double.parseDouble(arrayList.get(0));
-            // System.out.println(result);
-            // System.out.println(arrayList.get(0));
             for (int i = 1; i < arrayList.size(); i++) {
-                // System.out.println(arrayList.get(i));
                 if ("+-".indexOf(arrayList.get(i)) != -1) {
                     String opt = arrayList.get(i);
                     if (opt.equals("+")) {
@@ -162,7 +147,6 @@ public class MainCalculator implements ActionListener {
                     i += 1;
                 }
             }
-            // System.out.println(result);
         }
         return result;
     }
@@ -177,7 +161,6 @@ public class MainCalculator implements ActionListener {
     public void paintFrame() {
         JFrame jFrame = new JFrame();
         jFrame.setBounds(500, 500, 400, 435);
-        // jFrame.setAlwaysOnTop(true);
         jFrame.setLayout(null);
         jFrame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
